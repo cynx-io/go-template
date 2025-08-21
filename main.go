@@ -5,6 +5,7 @@ import (
 	"github.com/cynx-io/cynx-core/src/logger"
 	"github.com/cynx-io/micro-name/internal/app"
 	"github.com/cynx-io/micro-name/internal/dependencies/config"
+	"github.com/cynx-io/micro-name/internal/grpc"
 	"github.com/sirupsen/logrus"
 )
 
@@ -36,14 +37,13 @@ func main() {
 		panic(err)
 	}
 
-	logger.Info(ctx, "Creating servers")
-	servers, err := application.NewServers()
-	if err != nil {
-		panic(err)
+	logger.Info(ctx, "Initializing GRPC")
+	grpcServer := grpc.Server{
+		Services: application.Services,
 	}
 
-	logger.Info(ctx, "Starting servers")
-	if err := servers.Start(ctx); err != nil {
-		panic(err)
+	err = grpcServer.Start(ctx)
+	if err != nil {
+		panic("failed to start grpc server " + err.Error())
 	}
 }

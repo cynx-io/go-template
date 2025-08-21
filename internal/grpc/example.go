@@ -8,5 +8,5 @@ import (
 
 func (s *Server) Health(ctx context.Context, req *core.GenericRequest) (*core.GenericResponse, error) {
 	var resp core.GenericResponse
-	return grpccore.HandleGrpc(ctx, req, &resp, s.ExampleService.HealthCheck)
+	return grpccore.HandleGrpc(ctx, req, &resp, s.Services.ExampleService.HealthCheck)
 }
