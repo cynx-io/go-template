@@ -10,7 +10,7 @@ func setResponse[Resp response.Generic](resp Resp, code response.Code) {
 }
 
 func Success[Resp response.Generic](resp Resp) {
-	setResponse(resp, codeSuccess)
+	setResponse(resp, CodeSuccess)
 }
 
 func ErrorValidation[Resp response.Generic](resp Resp) {

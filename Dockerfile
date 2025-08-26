@@ -26,7 +26,7 @@ COPY config.json .
 COPY .env .
 
 # Expose the port your app uses
-EXPOSE 5002
+EXPOSE 5001
 
 # Run the binary
 CMD ["./microname"]

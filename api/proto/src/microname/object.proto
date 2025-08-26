@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+package microname;
+
+option go_package = "microname/api/proto";
+
+import "core.proto";
