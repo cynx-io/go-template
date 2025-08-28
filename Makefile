@@ -49,3 +49,8 @@ build_and_push:
 	docker build -t micro-name-dev:latest .
 	docker tag micro-name-dev:latest derwin334/micro-name-dev:latest
 	docker push derwin334/micro-name-dev:latest
+
+build_and_push_prod:
+	docker build -t micro-name-prod:latest .
+	docker tag micro-name-prod:latest derwin334/micro-name-prod:latest
+	docker push derwin334/micro-name-prod:latest
