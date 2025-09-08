@@ -6,16 +6,16 @@ import (
 	"gorm.io/gorm"
 )
 
-type ExampleRepo struct {
+type TblExample struct {
 	DB *gorm.DB
 }
 
-func NewExampleRepo(DB *gorm.DB) *ExampleRepo {
-	return &ExampleRepo{
+func NewTblExample(DB *gorm.DB) *TblExample {
+	return &TblExample{
 		DB: DB,
 	}
 }
 
-func (r *ExampleRepo) GetExample(ctx context.Context, id int32) (*entity.TblExample, error) {
+func (r *TblExample) GetExample(ctx context.Context, id int32) (*entity.TblExample, error) {
 	return nil, nil
 }

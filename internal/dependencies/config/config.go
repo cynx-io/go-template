@@ -11,6 +11,12 @@ type AppConfig struct {
 		Url   string `json:"url"`
 		Level string `json:"level"`
 	} `json:"elastic"`
+	Plutus struct {
+		Url string `mapstructure:"url"`
+	} `mapstructure:"plutus"`
+	Hermes struct {
+		Url string `mapstructure:"url"`
+	} `mapstructure:"hermes"`
 	App struct {
 		Name    string `mapstructure:"name"`
 		Address string `mapstructure:"address"`
@@ -24,7 +30,7 @@ type AppConfig struct {
 		Username    string `mapstructure:"username"`
 		Password    string `mapstructure:"password"`
 		Dialect     string `mapstructure:"dialect"`
-		AutoMigrate bool   `mapstructure:"autoMigrate"`
+		AutoMigrate bool   `mapstructure:"auto_migrate"`
 		Pool        struct {
 			Max     int `mapstructure:"max"`
 			Min     int `mapstructure:"min"`
@@ -33,6 +39,9 @@ type AppConfig struct {
 		} `mapstructure:"pool"`
 		Port int `mapstructure:"port"`
 	} `mapstructure:"database"`
+	Log struct {
+		MaxLength int `mapstructure:"max_length"`
+	}
 }
 
 func Init() {

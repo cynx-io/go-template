@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package plutus;
+
+option go_package = "plutus/api/proto";
+
+import "google/protobuf/timestamp.proto";
+import "plutus/object.proto";
+import "core.proto";
+
+service WebhookXenditService {
+  rpc HandlePaymentInvoice(HandlePaymentInvoiceRequest) returns (core.GenericResponse) {}
+}
+
+message HandlePaymentInvoiceRequest {
+  core.BaseRequest base = 1;
+  string id = 2;
+  string external_id = 3;
+  string user_id = 4;
+  bool is_high = 5;
+  string payment_method = 6;
+  string status = 7;
+  string merchant_name = 8;
+  int32 amount = 9;
+  int32 paid_amount = 10;
+  string bank_code = 11;
+  google.protobuf.Timestamp paid_at = 12;
+  string payer_email = 13;
+  string description = 14;
+  int32 adjusted_received_amount = 15;
+  int32 fees_paid_amount = 16;
+  google.protobuf.Timestamp updated = 17;
+  google.protobuf.Timestamp created = 18;
+  string currency = 19;
+  string payment_channel = 20;
+  string payment_destination = 21;
+  string webhook_key = 22;
+}

@@ -5,11 +5,11 @@ import (
 )
 
 type Service struct {
-	ExampleRepo *database.ExampleRepo
+	TblExample *database.TblExample
 }
 
-func New(exampleRepo *database.ExampleRepo) *Service {
+func New(tblExample *database.TblExample) *Service {
 	return &Service{
-		ExampleRepo: exampleRepo,
+		TblExample: tblExample,
 	}
 }

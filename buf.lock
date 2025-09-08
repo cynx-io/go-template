@@ -9,8 +9,8 @@ deps:
   - remote: buf.build
     owner: cynx
     repository: cynx-core
-    commit: fe05e6befb684f9aa93d2dc4cfeaac30
-    digest: shake256:74df7095d412d905396573819a27c6604018d20035d058cedf7872595319fcbc760dc75248745181cdc9e3b3fd4ecd09c494901ad04a161310921cf96a600318
+    commit: 50f94914d0044a12a9fc4a30284a75a0
+    digest: shake256:a5a858e91b56d1196c845bf3ff849d5cb5719bfc51dc036d71fbecca364a642bfc005dd39425ef7417bdc63c1bc9d432641d34668d3b33379d9eb7760b1517c0
   - remote: buf.build
     owner: googleapis
     repository: googleapis

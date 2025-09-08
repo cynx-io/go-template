@@ -17,12 +17,21 @@
     "username": "cynx",
     "password": "derwin334",
     "dialect": "mysql",
-    "autoMigrate": false,
+    "auto_migrate": false,
     "pool": {
       "max": 5,
       "min": 0,
       "acquire": 30000,
       "idle": 10000
     }
+  },
+  "log": {
+    "max_length": 50
+  },
+  "hermes": {
+    "url": "devspace:31501"
+  },
+  "plutus": {
+    "url": "devspace:31506"
   }
 }

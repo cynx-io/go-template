@@ -1,6 +1,7 @@
 package response
 
 import (
+	core "github.com/cynx-io/cynx-core/proto/gen"
 	"github.com/cynx-io/cynx-core/src/response"
 )
 
@@ -11,6 +12,7 @@ func setResponse[Resp response.Generic](resp Resp, code response.Code) {
 
 func Success[Resp response.Generic](resp Resp) {
 	setResponse(resp, CodeSuccess)
+	resp.GetBase().Status = core.Status_SUCCESS
 }
 
 func ErrorValidation[Resp response.Generic](resp Resp) {

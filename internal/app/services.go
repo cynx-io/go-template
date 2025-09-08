@@ -10,6 +10,6 @@ type Services struct {
 
 func NewServices(repos *Repos, dependencies *Dependencies) *Services {
 	return &Services{
-		ExampleService: exampleservice.New(repos.ExampleRepo),
+		ExampleService: exampleservice.New(repos.TblExample),
 	}
 }
